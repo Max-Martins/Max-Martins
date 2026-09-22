@@ -103,11 +103,11 @@ Este espaço será utilizado para apresentar projetos relacionados a:
 
 <div align="center">
 
-<a href="https://github.com/maxx-marinho">
+<a href="https://github.com/max-martins">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=maxx-marinho&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=000000&title_color=FF6B00&icon_color=0066FF&text_color=FFFFFF"/>
 </a>
 
-<a href="https://github.com/maxx-marinho">
+<a href="https://github.com/max-martins">
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=maxx-marinho&layout=compact&langs_count=8&hide_border=true&bg_color=000000&title_color=FF6B00&text_color=FFFFFF"/>
 </a>
 
