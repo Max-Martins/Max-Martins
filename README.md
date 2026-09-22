@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👋 Olá, eu sou Max L. Martins Marinho
+
 
 ### Analista de Licitação · Automação de Processos · Tecnologia
 
