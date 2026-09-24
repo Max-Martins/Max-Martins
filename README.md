@@ -184,3 +184,9 @@ Este espaço será utilizado para apresentar projetos relacionados a:
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:0066ff,100:ff6b00&height=100&section=footer" width="100%"/>
 
 </div>
+---
+## 🚀 Projeto validado em destaque
+### Captação de Licitações PNCP
+Automação validada para consulta de oportunidades, normalização de dados, geração de Excel, organização de anexos e comunicação segura por e-mail.
+**Stack:** n8n · API PNCP · SMTP seguro · Excel · Integrações MCP
+[Ver documentação do processo →](./PROCESSOS/2026-09-24-captacao-licitacoes-pncp-validada.md)
