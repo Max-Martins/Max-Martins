@@ -184,6 +184,8 @@ Este espaço será utilizado para apresentar projetos relacionados a:
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:0066ff,100:ff6b00&height=100&section=footer" width="100%"/>
 
 </div>
+
+
 ---
 ## 🚀 Projeto validado em destaque
 ### Captação de Licitações PNCP
