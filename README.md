@@ -101,14 +101,16 @@ Este espaço será utilizado para apresentar projetos relacionados a:
 
 ## 📊 GitHub Analytics
 
+Métricas que acompanham a evolução prática do meu portfólio: contribuições, linguagens, automações versionadas e documentação técnica de processos.
+
 <div align="center">
 
 <a href="https://github.com/max-martins">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=maxx-marinho&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=000000&title_color=FF6B00&icon_color=0066FF&text_color=FFFFFF"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Max-Martins&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=000000&title_color=FF6B00&icon_color=0066FF&text_color=FFFFFF"/>
 </a>
 
 <a href="https://github.com/max-martins">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=maxx-marinho&layout=compact&langs_count=8&hide_border=true&bg_color=000000&title_color=FF6B00&text_color=FFFFFF"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Max-Martins&layout=compact&langs_count=8&hide_border=true&bg_color=000000&title_color=FF6B00&text_color=FFFFFF"/>
 </a>
 
 </div>
@@ -117,10 +119,12 @@ Este espaço será utilizado para apresentar projetos relacionados a:
 
 ## 🔥 Contribution Streak
 
+Consistência na construção de automações, estudos e melhorias de fluxo aplicadas a desafios reais.
+
 <div align="center">
 
-<a href="https://github.com/maxx-marinho">
-  <img src="https://streak-stats.demolab.com?user=maxx-marinho&theme=dark&hide_border=true&background=000000&ring=FF6B00&fire=FF6B00&currStreakLabel=0066FF&sideLabels=FFFFFF&dates=888888" alt="GitHub Streak"/>
+<a href="https://github.com/Max-Martins">
+  <img src="https://streak-stats.demolab.com?user=Max-Martins&theme=dark&hide_border=true&background=000000&ring=FF6B00&fire=FF6B00&currStreakLabel=0066FF&sideLabels=FFFFFF&dates=888888" alt="GitHub Streak"/>
 </a>
 
 </div>
@@ -129,10 +133,12 @@ Este espaço será utilizado para apresentar projetos relacionados a:
 
 ## 📈 Activity Graph
 
+Visualização da atividade de desenvolvimento e automação, evidenciando a evolução contínua das soluções publicadas.
+
 <div align="center">
 
-<a href="https://github.com/maxx-marinho">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=maxx-marinho&bg_color=000000&color=FFFFFF&line=FF6B00&point=0066FF&area=true&hide_border=true" width="100%" alt="GitHub Activity Graph"/>
+<a href="https://github.com/Max-Martins">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Max-Martins&bg_color=000000&color=FFFFFF&line=FF6B00&point=0066FF&area=true&hide_border=true" width="100%" alt="GitHub Activity Graph"/>
 </a>
 
 </div>
@@ -141,9 +147,11 @@ Este espaço será utilizado para apresentar projetos relacionados a:
 
 ## 🏆 GitHub Trophies
 
+Indicadores de participação e evolução no GitHub, acompanhando a construção progressiva de um portfólio técnico aplicado.
+
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=maxx-marinho&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&row=1" alt="GitHub Trophies"/>
+<img src="https://github-profile-trophy.vercel.app/?username=Max-Martins&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&row=1" alt="GitHub Trophies"/>
 
 </div>
 
