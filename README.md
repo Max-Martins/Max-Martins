@@ -153,7 +153,7 @@ Este espaço será utilizado para apresentar projetos relacionados a:
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/maxx-marinho/maxx-marinho/output/github-contribution-grid-snake.svg" alt="Snake animation"/>
+<img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/output/github-contribution-grid-snake.svg" alt="Snake animation"/>
 
 </div>
 
