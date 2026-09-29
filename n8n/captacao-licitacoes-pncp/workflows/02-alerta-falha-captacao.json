@@ -1,0 +1,62 @@
+{
+  "id": "AlertaFalhaLicit01",
+  "name": "Alerta de falha - Captação de licitações",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e10",
+      "name": "Quando o fluxo falhar",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "remetente@exemplo.com",
+        "toEmail": "alertas@exemplo.com",
+        "subject": "=FALHA no envio do relatório de licitações - {{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy') }}",
+        "emailFormat": "text",
+        "text": "=A execução automática do fluxo \"{{ $json.workflow.name }}\" falhou e o relatório de licitações pode não ter sido enviado.\n\nNó com erro: {{ $json.execution.lastNodeExecuted || 'não informado' }}\nMensagem: {{ $json.execution.error.message || 'não informada' }}\nHorário: {{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy HH:mm') }}\nExecução: {{ $json.execution.url || $json.execution.id }}\n\nPara reenviar, abra o fluxo no n8n e clique em \"Executar fluxo\".",
+        "options": {}
+      },
+      "id": "d2e3f4a5-b6c7-4d8e-9f0a-1b2c3d4e5f11",
+      "name": "Avisar por e-mail",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        240,
+        0
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "",
+          "name": "SMTP account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Quando o fluxo falhar": {
+      "main": [
+        [
+          {
+            "node": "Avisar por e-mail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "tags": [],
+  "active": false
+}
