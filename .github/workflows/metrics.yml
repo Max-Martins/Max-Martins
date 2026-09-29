@@ -1,0 +1,33 @@
+name: Generate profile cards
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - scripts/generate_cards.py
+      - .github/workflows/metrics.yml
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Gerar SVGs
+        env:
+          # METRICS_TOKEN (PAT opcional) inclui contribuições privadas; sem ele usa o token padrão.
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: python scripts/generate_cards.py dist
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: metrics
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
