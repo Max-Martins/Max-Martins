@@ -87,15 +87,15 @@ Sou **Analista de Licitação** e trabalho na interseção entre **compras públ
 ### 📡 Captação de Licitações · PNCP
 <img src="https://img.shields.io/badge/status-validado_em_produ%C3%A7%C3%A3o-2ea043?style=flat-square" alt="validado"/>
 
-Workflow n8n que roda todo dia útil às 08h: busca pregões eletrônicos com proposta aberta em **6 UFs**, filtra pelo CNAE e pelo catálogo de produtos, gera **relatório Excel** a partir de modelo, envia por **e-mail** e baixa **editais e anexos** organizados por UF e órgão.
+Automação diária que monitora oportunidades de pregão eletrônico em fontes oficiais, aplica critérios proprietários de aderência ao portfólio, gera **relatórios gerenciais** e organiza a documentação dos editais.
 
-- Retry e API reserva quando a busca principal falha
-- Download incremental (não baixa o que já existe)
-- Workflow de erro que alerta falhas por e-mail
+- Execução agendada e monitorada
+- Tolerância a falhas com alertas automáticos
+- Processo auditável e versionado
 
-`n8n` `JavaScript` `API PNCP` `Excel` `Docker` `SMTP`
+`n8n` `JavaScript` `API PNCP` `Excel` `Docker`
 
-[**Documentação →**](./n8n/captacao-licitacoes-pncp/README.md) · [Validação →](./PROCESSOS/2026-09-24-captacao-licitacoes-pncp-validada.md)
+🔒 Código em repositório privado · demonstração sob solicitação
 
 </td>
 <td width="50%" valign="top">
@@ -151,7 +151,7 @@ Onde cada ferramenta entra, do edital publicado ao pós-contrato:
 
 ```mermaid
 flowchart LR
-    A["📡 Captação<br/>API PNCP · diário"] --> B["🔎 Triagem<br/>n8n + filtros CNAE/produto"]
+    A["📡 Captação<br/>API PNCP · diário"] --> B["🔎 Triagem<br/>n8n + critérios de aderência"]
     B --> C["🧠 Análise<br/>IA sobre edital e TR"]
     C --> D["💰 Proposta<br/>Excel · preço e margem"]
     D --> E["📦 Pós-contrato<br/>atas · empenhos · faturamento"]
