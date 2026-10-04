@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,55:ff6b00,100:0066ff&height=200&section=header&text=Max%20L.%20Martins%20Marinho&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Licita%C3%A7%C3%B5es%20P%C3%BAblicas%20%C2%B7%20Automa%C3%A7%C3%A3o%20de%20Processos%20%C2%B7%20IA%20aplicada&descAlignY=58&descSize=17" width="100%" alt="Max L. Martins Marinho"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,55:ff6b00,100:0066ff&height=200&section=header&text=Max%20Marinho&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Licita%C3%A7%C3%B5es%20P%C3%BAblicas%20%C2%B7%20Automa%C3%A7%C3%A3o%20de%20Processos%20%C2%B7%20IA%20aplicada&descAlignY=58&descSize=17" width="100%" alt="Max Marinho"/>
 
 <a href="https://www.linkedin.com/in/maxx-marinho/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 <a href="https://www.instagram.com/maxx.marinho/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/></a>
