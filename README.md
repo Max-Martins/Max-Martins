@@ -84,6 +84,8 @@ Sou **Analista de Licitação** e trabalho na interseção entre **compras públ
 <tr>
 <td width="50%" valign="top">
 
+<img src="./assets/capa-portfolio.png" width="100%" alt="Automação e Inteligência em Licitações Públicas"/>
+
 ### 📡 Captação de Licitações · PNCP
 <img src="https://img.shields.io/badge/status-validado_em_produ%C3%A7%C3%A3o-2ea043?style=flat-square" alt="validado"/>
 
@@ -96,6 +98,40 @@ Automação diária que monitora oportunidades de pregão eletrônico em fontes 
 `n8n` `JavaScript` `API PNCP` `Excel` `Docker`
 
 🔒 Código em repositório privado · demonstração sob solicitação
+
+</td>
+<td width="50%" valign="top">
+
+<img src="./assets/capa-lab.png" width="100%" alt="Automation Lab"/>
+
+### 🧪 Automation Lab
+<img src="https://img.shields.io/badge/status-em_evolu%C3%A7%C3%A3o-8250df?style=flat-square" alt="em evolução"/>
+
+Laboratório onde novas automações são concebidas, testadas e validadas antes de chegar à produção.
+
+- Prototipação e testes de novos fluxos
+- Componentes reutilizáveis e boas práticas
+- IA aplicada ao desenvolvimento
+
+`n8n` `Python` `APIs REST` `IA`
+
+🔒 Repositório privado
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<img src="./assets/capa-infra.png" width="100%" alt="Infraestrutura n8n Self-Hosted"/>
+
+### 🐳 n8n Self-Hosting
+<img src="https://img.shields.io/badge/status-estudo_de_infra-8b949e?style=flat-square" alt="estudo"/>
+
+Referência de hospedagem do n8n em diferentes ambientes (Docker, Docker Compose, Kubernetes), usada como base para a infraestrutura dos meus fluxos de automação.
+
+`Docker` `Kubernetes` `n8n`
+
+[**Repositório →**](https://github.com/Max-Martins/n8n-hosting)
 
 </td>
 <td width="50%" valign="top">
@@ -113,22 +149,7 @@ Gerador próprio dos painéis deste perfil. Coleta dados pela **API GraphQL do G
 
 [**Código →**](./scripts/generate_cards.py) · [Workflow →](./.github/workflows/metrics.yml)
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🐳 n8n Self-Hosting
-<img src="https://img.shields.io/badge/status-estudo_de_infra-8b949e?style=flat-square" alt="estudo"/>
-
-Referência de hospedagem do n8n em diferentes ambientes (Docker, Docker Compose, Kubernetes), usada como base para a infraestrutura dos meus fluxos de automação.
-
-`Docker` `Kubernetes` `n8n`
-
-[**Repositório →**](https://github.com/Max-Martins/n8n-hosting)
-
-</td>
-<td width="50%" valign="top">
+<br/>
 
 ### 🐍 Contribution Snake
 <img src="https://img.shields.io/badge/status-automatizado-0066ff?style=flat-square" alt="automatizado"/>
