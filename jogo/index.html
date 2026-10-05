@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}</style>
+<title>Cobrinha de Contribuições</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: one column, the contribution grid is the whole stage; score strip above, signature below. Single dark look (GitHub dark) by choice. */
+:root {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --panel: #161b22;
+  --line: #30363d;
+  --fg: #e6edf3;
+  --muted: #8b949e;
+  --c0: #161b22;
+  --c1: #0e4429;
+  --c2: #006d32;
+  --c3: #26a641;
+  --c4: #39d353;
+  --snake: #a371f7;
+  --snake-dim: #6e40c9;
+  --danger: #f85149;
+  --display: "Mona Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--display);
+  padding-inline: 16px;
+  padding-block: 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.wrap { width: 100%; max-width: 760px; display: flex; flex-direction: column; gap: 14px; }
+.top { display: flex; align-items: end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+h1 { margin: 0; font-size: 1.15rem; font-weight: 600; color: var(--muted); text-wrap: balance; }
+h1 b { color: var(--fg); font-weight: 800; }
+.stats { display: flex; gap: 10px; }
+.stat {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+  padding: 6px 12px; min-width: 76px; display: flex; flex-direction: column; gap: 2px;
+}
+.stat span { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.stat strong { font-family: var(--mono); font-size: 1.35rem; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.stat.score strong { color: var(--c4); }
+.board {
+  position: relative; background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+  padding: 12px; display: flex; flex-direction: column; gap: 8px;
+}
+canvas { display: block; width: 100%; height: auto; touch-action: none; outline: none; border-radius: 4px; }
+canvas:focus-visible { box-shadow: 0 0 0 2px var(--snake); }
+.legend { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font-size: .75rem; color: var(--muted); }
+.scale { display: flex; align-items: center; gap: 4px; }
+.scale i { width: 11px; height: 11px; border-radius: 2px; display: inline-block; outline: 1px solid rgba(255,255,255,.04); outline-offset: -1px; }
+.overlay {
+  position: absolute; inset: 12px 12px 34px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px; text-align: center; background: rgba(13,17,23,.78); backdrop-filter: blur(2px); border-radius: 4px;
+}
+.overlay h2 { margin: 0; font-size: clamp(1.3rem, 4vw, 2rem); font-weight: 800; }
+.overlay p { margin: 0; color: var(--muted); max-width: 40ch; font-size: .9rem; }
+.overlay kbd { font-family: var(--mono); font-size: .8rem; background: var(--panel); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 1px 6px; color: var(--fg); }
+button.play {
+  font: 600 .95rem var(--display); color: #fff; background: #238636; border: 1px solid rgba(240,246,252,.1);
+  border-radius: 6px; padding: 8px 18px; cursor: pointer;
+}
+button.play:hover { background: #2ea043; }
+button.play:focus-visible { outline: 2px solid var(--snake); outline-offset: 2px; }
+.pad { display: none; grid-template-columns: repeat(3, 56px); grid-template-rows: repeat(2, 48px); gap: 6px; justify-content: center; }
+.pad button {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px; color: var(--fg);
+  font-size: 1.2rem; cursor: pointer; touch-action: manipulation;
+}
+.pad button:active { background: var(--line); }
+.pad .up { grid-column: 2; }
+.pad .left { grid-column: 1; grid-row: 2; }
+.pad .down { grid-column: 2; grid-row: 2; }
+.pad .right { grid-column: 3; grid-row: 2; }
+@media (pointer: coarse) { .pad { display: grid; } }
+.sign { text-align: center; display: flex; flex-direction: column; gap: 2px; padding-top: 6px; }
+.sign strong { font-size: 1.6rem; font-weight: 800; letter-spacing: .01em; background: linear-gradient(90deg, var(--c4), var(--snake)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sign span { font-size: .75rem; color: var(--muted); font-family: var(--mono); }
+.dead { color: var(--danger); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top">
+    <h1><b>Cobrinha</b> de contribuições</h1>
+    <div class="stats">
+      <div class="stat score"><span>Pontos</span><strong id="score">0</strong></div>
+      <div class="stat"><span>Recorde</span><strong id="best">0</strong></div>
+      <div class="stat"><span>Tamanho</span><strong id="len">4</strong></div>
+    </div>
+  </div>
+
+  <div class="board">
+    <canvas id="cv" tabindex="0" aria-label="Tabuleiro do jogo da cobrinha"></canvas>
+    <div class="legend">
+      <span id="hint">Setas ou WASD para mover · Espaço pausa</span>
+      <span class="scale">Menos <i style="background:var(--c1)"></i><i style="background:var(--c2)"></i><i style="background:var(--c3)"></i><i style="background:var(--c4)"></i> Mais pontos</span>
+    </div>
+    <div class="overlay" id="overlay">
+      <h2 id="ovTitle">Coma as contribuições</h2>
+      <p id="ovText">Use <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> para guiar a cobra. Verdes mais escuros valem mais: 10, 20, 30 e 40 pontos.</p>
+      <button class="play" id="playBtn">Jogar</button>
+    </div>
+  </div>
+
+  <div class="pad" aria-label="Controles de toque">
+    <button class="up" data-d="up" aria-label="Cima">▲</button>
+    <button class="left" data-d="left" aria-label="Esquerda">◀</button>
+    <button class="down" data-d="down" aria-label="Baixo">▼</button>
+    <button class="right" data-d="right" aria-label="Direita">▶</button>
+  </div>
+
+  <div class="sign">
+    <strong>Max Marinho</strong>
+    <span>github.com/Max-Martins</span>
+  </div>
+</div>
+
+<script>
+(() => {
+  const COLS = 30, ROWS = 14, FOOD_COUNT = 5;
+  const DIRS = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0] };
+  const OPP = { up: "down", down: "up", left: "right", right: "left" };
+  const css = getComputedStyle(document.documentElement);
+  const C = k => css.getPropertyValue(k).trim();
+  const LEVEL = [C("--c0"), C("--c1"), C("--c2"), C("--c3"), C("--c4")];
+  const SNAKE = C("--snake"), SNAKE_DIM = C("--snake-dim");
+
+  const cv = document.getElementById("cv"), ctx = cv.getContext("2d");
+  const $ = id => document.getElementById(id);
+  const scoreEl = $("score"), bestEl = $("best"), lenEl = $("len");
+  const overlay = $("overlay"), ovTitle = $("ovTitle"), ovText = $("ovText"), playBtn = $("playBtn");
+
+  let best = 0;
+  try { best = +localStorage.getItem("cobrinha-best") || 0; } catch (e) {}
+  bestEl.textContent = best;
+
+  let snake, dir, queue, foods, score, state, stepMs, acc, last, cell, gap, flash;
+
+  function reset() {
+    const y = Math.floor(ROWS / 2);
+    snake = [[6, y], [5, y], [4, y], [3, y]];
+    dir = "right"; queue = []; foods = []; score = 0; stepMs = 200; acc = 0; flash = [];
+    for (let i = 0; i < FOOD_COUNT; i++) spawn();
+    updateHud();
+  }
+
+  function occupied(x, y) {
+    return snake.some(s => s[0] === x && s[1] === y) || foods.some(f => f.x === x && f.y === y);
+  }
+  function spawn() {
+    let x, y, n = 0;
+    do { x = Math.floor(Math.random() * COLS); y = Math.floor(Math.random() * ROWS); n++; }
+    while (occupied(x, y) && n < 2000);
+    const r = Math.random();
+    const level = r < .4 ? 1 : r < .7 ? 2 : r < .9 ? 3 : 4;
+    foods.push({ x, y, level });
+  }
+
+  function updateHud() {
+    scoreEl.textContent = score;
+    lenEl.textContent = snake.length;
+    bestEl.textContent = best;
+  }
+
+  function step() {
+    if (queue.length) dir = queue.shift();
+    const [dx, dy] = DIRS[dir];
+    const head = [snake[0][0] + dx, snake[0][1] + dy];
+    const hitWall = head[0] < 0 || head[1] < 0 || head[0] >= COLS || head[1] >= ROWS;
+    const fi = foods.findIndex(f => f.x === head[0] && f.y === head[1]);
+    // the tail moves away this tick unless we eat, so it doesn't count as a collision
+    const body = fi === -1 ? snake.slice(0, -1) : snake;
+    const hitSelf = body.some(s => s[0] === head[0] && s[1] === head[1]);
+    if (hitWall || hitSelf) return gameOver();
+    snake.unshift(head);
+    if (fi !== -1) {
+      const f = foods.splice(fi, 1)[0];
+      score += f.level * 10;
+      flash.push({ x: f.x, y: f.y, t: 0, pts: f.level * 10 });
+      stepMs = Math.max(120, stepMs - 1);
+      spawn();
+      updateHud();
+    } else {
+      snake.pop();
+    }
+  }
+
+  function gameOver() {
+    state = "over";
+    if (score > best) {
+      best = score;
+      try { localStorage.setItem("cobrinha-best", best); } catch (e) {}
+    }
+    updateHud();
+    ovTitle.innerHTML = '<span class="dead">Fim de jogo</span>';
+    ovText.textContent = `Você fez ${score} pontos com ${snake.length} quadrados de cobra. Recorde: ${best}.`;
+    playBtn.textContent = "Jogar de novo";
+    overlay.hidden = false;
+    playBtn.focus();
+  }
+
+  function start() {
+    reset();
+    state = "run";
+    overlay.hidden = true;
+    last = performance.now();
+    cv.focus();
+  }
+
+  function togglePause() {
+    if (state === "run") {
+      state = "pause";
+      ovTitle.textContent = "Pausado";
+      ovText.innerHTML = "Pressione <kbd>Espaço</kbd> para continuar.";
+      playBtn.textContent = "Continuar";
+      overlay.hidden = false;
+    } else if (state === "pause") {
+      state = "run"; overlay.hidden = true; last = performance.now(); cv.focus();
+    }
+  }
+
+  function turn(d) {
+    if (state !== "run") return;
+    const lastDir = queue.length ? queue[queue.length - 1] : dir;
+    if (d === lastDir || d === OPP[lastDir] || queue.length >= 2) return;
+    queue.push(d);
+  }
+
+  const KEYS = {
+    ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right",
+    w: "up", s: "down", a: "left", d: "right", W: "up", S: "down", A: "left", D: "right"
+  };
+  window.addEventListener("keydown", e => {
+    if (KEYS[e.key]) {
+      e.preventDefault();
+      if (state === "idle" || state === "over") start();
+      turn(KEYS[e.key]);
+    } else if (e.key === " " || e.key === "Enter") {
+      if (document.activeElement === playBtn) return;
+      e.preventDefault();
+      if (state === "idle" || state === "over") start(); else togglePause();
+    }
+  });
+  playBtn.addEventListener("click", () => (state === "pause" ? togglePause() : start()));
+  document.querySelectorAll(".pad button").forEach(b =>
+    b.addEventListener("pointerdown", e => {
+      e.preventDefault();
+      if (state === "idle" || state === "over") start();
+      turn(b.dataset.d);
+    })
+  );
+
+  let touch = null;
+  cv.addEventListener("pointerdown", e => { touch = [e.clientX, e.clientY]; });
+  cv.addEventListener("pointerup", e => {
+    if (!touch) return;
+    const dx = e.clientX - touch[0], dy = e.clientY - touch[1];
+    touch = null;
+    if (Math.max(Math.abs(dx), Math.abs(dy)) < 20) return;
+    turn(Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? "right" : "left") : (dy > 0 ? "down" : "up"));
+  });
+
+  function resize() {
+    const w = cv.parentElement.clientWidth - 24;
+    const dpr = window.devicePixelRatio || 1;
+    const pitch = w / COLS;
+    gap = Math.max(1.5, pitch * 0.16);
+    cell = pitch;
+    const h = pitch * ROWS;
+    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+    cv.style.height = h + "px";
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  window.addEventListener("resize", resize);
+
+  function rr(x, y, s, r, color) {
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.roundRect(x, y, s, s, r);
+    ctx.fill();
+  }
+
+  function mix(a, b, t) {
+    const p = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+    const A = p(a), B = p(b);
+    return `rgb(${A.map((v, i) => Math.round(v + (B[i] - v) * t)).join(",")})`;
+  }
+
+  function draw(dt) {
+    const w = cell * COLS, h = cell * ROWS, s = cell - gap, r = Math.max(2, s * 0.18);
+    ctx.clearRect(0, 0, w, h);
+    for (let y = 0; y < ROWS; y++)
+      for (let x = 0; x < COLS; x++) rr(x * cell + gap / 2, y * cell + gap / 2, s, r, LEVEL[0]);
+    for (const f of foods) rr(f.x * cell + gap / 2, f.y * cell + gap / 2, s, r, LEVEL[f.level]);
+    snake.forEach((p, i) => {
+      const t = snake.length > 1 ? i / (snake.length - 1) : 0;
+      const shrink = i === 0 ? 0 : s * 0.12 * t;
+      rr(p[0] * cell + gap / 2 + shrink / 2, p[1] * cell + gap / 2 + shrink / 2, s - shrink, r, mix(SNAKE, SNAKE_DIM, t));
+    });
+    // eyes
+    const [hx, hy] = snake[0], [dx, dy] = DIRS[dir];
+    const cx = hx * cell + cell / 2, cy = hy * cell + cell / 2, e = s * 0.18;
+    ctx.fillStyle = "#0d1117";
+    for (const side of [-1, 1]) {
+      ctx.beginPath();
+      ctx.arc(cx + dx * e + dy * side * e * 1.1, cy + dy * e + dx * side * e * 1.1, Math.max(1.2, s * 0.09), 0, Math.PI * 2);
+      ctx.fill();
+    }
+    // points popping up where a contribution was eaten
+    ctx.font = `700 ${Math.max(10, cell * 0.55)}px "JetBrains Mono", monospace`;
+    ctx.textAlign = "center";
+    flash = flash.filter(f => (f.t += dt) < 700);
+    for (const f of flash) {
+      const k = f.t / 700;
+      ctx.globalAlpha = 1 - k;
+      ctx.fillStyle = LEVEL[4];
+      ctx.fillText("+" + f.pts, f.x * cell + cell / 2, f.y * cell - k * cell);
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function loop(now) {
+    const dt = now - (last ?? now);
+    last = now;
+    if (state === "run") {
+      acc += dt;
+      while (acc >= stepMs && state === "run") { acc -= stepMs; step(); }
+    }
+    draw(dt);
+    requestAnimationFrame(loop);
+  }
+
+  resize();
+  reset();
+  state = "idle";
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
