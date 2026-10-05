@@ -224,9 +224,9 @@ flowchart LR
 
 <br/>
 
-<a href="https://max-martins.github.io/Max-Martins/jogo/" title="Jogar a cobrinha"><img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution snake"/></a>
+<a href="https://max-martins.github.io/Max-Martins/jogo/?v=2" title="Jogar a cobrinha"><img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution snake"/></a>
 
-<a href="https://max-martins.github.io/Max-Martins/jogo/"><img src="https://img.shields.io/badge/%E2%96%B6%20Jogar%20a%20cobrinha-a371f7?style=for-the-badge" alt="Jogar a cobrinha"/></a>
+<a href="https://max-martins.github.io/Max-Martins/jogo/?v=2"><img src="https://img.shields.io/badge/%E2%96%B6%20Jogar%20a%20cobrinha-a371f7?style=for-the-badge" alt="Jogar a cobrinha"/></a>
 
 <sub>Painéis gerados diariamente por <a href="./scripts/generate_cards.py">generate_cards.py</a> via GitHub Actions.</sub>
 
