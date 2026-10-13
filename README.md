@@ -156,6 +156,8 @@ Cliente leve em Python para a **API pública do PNCP**: lista licitações com p
 <tr>
 <td width="50%" valign="top">
 
+<img src="./assets/capa-profile-cards.png" width="100%" alt="Profile Cards — painéis do perfil desenhados por código próprio"/>
+
 ### 📊 Profile Cards
 <img src="https://img.shields.io/badge/status-automatizado-0066ff?style=flat-square" alt="automatizado"/>
 
@@ -171,6 +173,8 @@ Gerador próprio dos painéis deste perfil. Coleta dados pela **API GraphQL do G
 
 </td>
 <td width="50%" valign="top">
+
+<img src="./assets/capa-contribution-snake.png" width="100%" alt="Contribution Snake — a cobrinha que devora as contribuições"/>
 
 ### 🐍 Contribution Snake
 <img src="https://img.shields.io/badge/status-automatizado-0066ff?style=flat-square" alt="automatizado"/>
