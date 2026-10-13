@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="t d">
+  <title id="t">Max Marinho</title>
+  <desc id="d">Analista de licitações · automação de processos com n8n, Python, IA e a API do PNCP</desc>
+  <defs>
+    <linearGradient id="nome" x1="0" x2="1">
+      <stop offset="0" stop-color="#2dd4a8"/><stop offset=".55" stop-color="#3b82f6"/><stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <radialGradient id="brilho1" cx=".85" cy=".1" r=".7"><stop offset="0" stop-color="#1e5aaa" stop-opacity=".55"/><stop offset="1" stop-color="#1e5aaa" stop-opacity="0"/></radialGradient>
+    <radialGradient id="brilho2" cx=".45" cy="1.1" r=".6"><stop offset="0" stop-color="#10785a" stop-opacity=".45"/><stop offset="1" stop-color="#10785a" stop-opacity="0"/></radialGradient>
+    <pattern id="grade" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".045"/></pattern>
+    <clipPath id="card"><rect width="1200" height="300" rx="24"/></clipPath>
+    <style>
+      text { font-family: "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif; }
+      .mono { font-family: "JetBrains Mono", Consolas, "DejaVu Sans Mono", monospace; }
+      .frase { opacity: 0; animation: troca 12s infinite; }
+      .f2 { animation-delay: 3s; } .f3 { animation-delay: 6s; } .f4 { animation-delay: 9s; }
+      @keyframes troca { 0%, 25% { opacity: 0; } 2%, 22% { opacity: 1; } }
+      .cursor { animation: pisca 1s steps(1) infinite; }
+      @keyframes pisca { 50% { opacity: 0; } }
+      .pulso { animation: pulso 3s ease-in-out infinite; transform-origin: 1010px 150px; }
+      @keyframes pulso { 50% { opacity: .55; } }
+      @media (prefers-reduced-motion: reduce) { .frase, .cursor, .pulso { animation: none; } .f1 { opacity: 1; } }
+    </style>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="1200" height="300" fill="#070b14"/>
+    <rect width="1200" height="300" fill="url(#brilho1)"/>
+    <rect width="1200" height="300" fill="url(#brilho2)"/>
+    <rect width="1200" height="300" fill="url(#grade)"/>
+  </g>
+  <rect x="1" y="1" width="1198" height="298" rx="23" fill="none" stroke="#fff" stroke-opacity=".09"/>
+
+  <path d="M70 72h28" stroke="#2dd4a8" stroke-width="3"/>
+  <text x="110" y="78" fill="#2dd4a8" font-size="15" font-weight="700" letter-spacing="4">LICITAÇÕES · AUTOMAÇÃO · IA</text>
+  <text x="68" y="150" fill="url(#nome)" font-size="68" font-weight="800" letter-spacing="-1.5">Max Marinho</text>
+  <text x="70" y="192" fill="#9aa6bd" font-size="21">Analista de Licitação · automação de processos de compras públicas</text>
+
+  <g class="mono" font-size="17" fill="#e6ebf5">
+    <text x="70" y="245"><tspan fill="#2dd4a8">$</tspan></text>
+    <text class="frase f1" x="90" y="245">captando pregões na API do PNCP<tspan class="cursor" fill="#2dd4a8"> ▍</tspan></text>
+    <text class="frase f2" x="90" y="245">filtrando editais com n8n + Python<tspan class="cursor" fill="#2dd4a8"> ▍</tspan></text>
+    <text class="frase f3" x="90" y="245">lendo o edital com IA, cláusula por cláusula<tspan class="cursor" fill="#2dd4a8"> ▍</tspan></text>
+    <text class="frase f4" x="90" y="245">gerando proposta, Excel e declarações<tspan class="cursor" fill="#2dd4a8"> ▍</tspan></text>
+  </g>
+
+  <g class="pulso" fill="none" stroke-width="2">
+    <circle cx="1010" cy="150" r="92" stroke="#3b82f6" stroke-opacity=".25" stroke-dasharray="6 8"/>
+    <circle cx="1010" cy="150" r="58" stroke="#8b5cf6" stroke-opacity=".5"/>
+  </g>
+  <g stroke="#3b82f6" stroke-opacity=".7" stroke-width="2">
+    <path d="M935 85 975 120M1085 85l-40 35M935 215l40-35M1085 215l-40-35"/>
+  </g>
+  <circle cx="1010" cy="150" r="40" fill="#0d1526" stroke="url(#nome)" stroke-width="3"/>
+  <path d="M993 140h28M993 150h24M993 160h14l6 6 12-14" fill="none" stroke="#e6ebf5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#0d1526" stroke-width="2">
+    <circle cx="925" cy="75" r="20" stroke="#2dd4a8"/><circle cx="1095" cy="75" r="20" stroke="#3b82f6"/>
+    <circle cx="925" cy="225" r="20" stroke="#3b82f6"/><circle cx="1095" cy="225" r="20" stroke="#8b5cf6"/>
+  </g>
+  <g fill="none" stroke-width="2" stroke-linecap="round">
+    <circle cx="922" cy="72" r="6" stroke="#2dd4a8"/><path d="M926.5 76.5l5 5" stroke="#2dd4a8"/>
+    <path d="M1086 68h18l-7 9v8l-4 2v-10z" stroke="#3b82f6" stroke-linejoin="round"/>
+    <path d="M916 220h7l2 3h9v9h-18z" stroke="#3b82f6" stroke-linejoin="round"/>
+    <path d="M1088 232v-6M1095 232v-12M1102 232v-9" stroke="#8b5cf6"/>
+  </g>
+</svg>

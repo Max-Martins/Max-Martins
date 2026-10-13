@@ -1,80 +1,24 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,55:ff6b00,100:0066ff&height=200&section=header&text=Max%20Marinho&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Licita%C3%A7%C3%B5es%20P%C3%BAblicas%20%C2%B7%20Automa%C3%A7%C3%A3o%20de%20Processos%20%C2%B7%20IA%20aplicada&descAlignY=58&descSize=17" width="100%" alt="Max Marinho"/>
+<img src="./assets/cabecalho.svg" width="100%" alt="Max Marinho · Licitações, automação e IA"/>
 
 <a href="https://www.linkedin.com/in/maxx-marinho/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 <a href="https://www.instagram.com/maxx.marinho/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/></a>
 <a href="https://github.com/Max-Martins?tab=repositories"><img src="https://img.shields.io/badge/Reposit%C3%B3rios-161B22?style=for-the-badge&logo=github&logoColor=white" alt="Repositórios"/></a>
-<img src="https://komarev.com/ghpvc/?username=Max-Martins&label=VISITAS&style=for-the-badge&color=ff6b00" alt="Visitas ao perfil"/>
-
-<br/><br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2800&pause=900&color=FF6B00&center=true&vCenter=true&width=720&lines=Analista+de+Licita%C3%A7%C3%A3o;Automa%C3%A7%C3%A3o+de+processos+com+n8n+%2B+Python;Integra%C3%A7%C3%A3o+com+a+API+do+PNCP;IA+aplicada+%C3%A0+an%C3%A1lise+de+editais" alt="Typing animation"/>
+<a href="https://max-martins.github.io/Max-Martins/apoie/"><img src="https://img.shields.io/badge/Apoie%20com%20PIX-2dd4a8?style=for-the-badge&logo=pix&logoColor=white" alt="Apoie com PIX"/></a>
 
 </div>
-
-<br/>
 
 ## Sobre mim
 
-Sou **Analista de Licitação** e trabalho na interseção entre **compras públicas, tecnologia e automação**. Transformo rotinas manuais do ciclo licitatório (captação de editais, triagem, organização de documentos e relatórios) em **fluxos automatizados, auditáveis e versionados**.
+Sou **Analista de Licitação** e trabalho com **compras públicas e automação**. Meu dia a dia é edital, termo de referência, proposta e prazo. Meu foco é tirar o trabalho repetitivo desse ciclo e transformar em fluxo automatizado, auditável e versionado.
 
-- 🎯 **Foco atual:** automação da captação de pregões eletrônicos via API do PNCP
-- 🛠️ **Construindo:** fluxos em n8n com código JavaScript e Python, rodando em Docker
-- 🤖 **Explorando:** IA generativa (Claude Code, Codex, MCP) para análise de editais e TRs
-- ⚖️ **Base normativa:** Lei nº 14.133/2021 e rotinas de pregão eletrônico
+- 🎯 **Foco atual:** captação e triagem de pregões pela API do PNCP
+- 🛠️ **Construindo:** fluxos em n8n com JavaScript e Python, rodando em Docker
+- 🤖 **Explorando:** IA (Claude, Codex, MCP) para ler editais e cruzar itens com tabelas de preço
+- ⚖️ **Base:** Lei nº 14.133/2021 e a rotina real de quem participa de licitação
 
-> **Menos tarefa repetitiva. Mais automação. Mais tempo para decisões que importam.**
-
----
-
-## Habilidades
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-#### 📑 Licitações & Negócio
-
-- Captação e triagem de oportunidades (PNCP)
-- Análise de editais, termos de referência e riscos
-- Pregão eletrônico e Lei nº 14.133/2021
-- Formação de preço, margem e viabilidade
-- Gestão de atas, empenhos e ordens de fornecimento
-- Relatórios gerenciais em Excel
-
-</td>
-<td width="50%" valign="top">
-
-#### ⚙️ Tecnologia & Automação
-
-- Orquestração de fluxos com **n8n** (self-hosted)
-- Integração com **APIs REST** e **GraphQL**
-- Scripts em **JavaScript** e **Python**
-- Containers com **Docker / Docker Compose**
-- CI/CD e rotinas agendadas com **GitHub Actions**
-- Desenvolvimento assistido por **IA** e **MCP**
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=py,js,nodejs,graphql,docker,linux,powershell,git,github,githubactions,vscode,md&theme=dark&perline=12" alt="Stack técnica"/>
-
-<br/><br/>
-
-<img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" alt="n8n"/>
-<img src="https://img.shields.io/badge/API_PNCP-0066FF?style=flat-square" alt="API PNCP"/>
-<img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" alt="Excel"/>
-<img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code"/>
-<img src="https://img.shields.io/badge/MCP-000000?style=flat-square&logo=anthropic&logoColor=white" alt="MCP"/>
-<img src="https://img.shields.io/badge/Codex_%2F_ChatGPT-000000?style=flat-square&logo=openai&logoColor=white" alt="Codex / ChatGPT"/>
-<img src="https://img.shields.io/badge/SMTP-555555?style=flat-square&logo=maildotru&logoColor=white" alt="SMTP"/>
-<img src="https://img.shields.io/badge/Lei_14.133%2F2021-FF6B00?style=flat-square" alt="Lei 14.133/2021"/>
-
-</div>
+> **Menos tarefa repetitiva. Mais automação. Mais tempo para as decisões que importam.**
 
 ---
 
@@ -84,59 +28,45 @@ Sou **Analista de Licitação** e trabalho na interseção entre **compras públ
 <tr>
 <td width="50%" valign="top">
 
-<img src="./assets/capa-portfolio.png" width="100%" alt="Automação e Inteligência em Licitações Públicas"/>
+<a href="https://github.com/Max-Martins/licitacoes-pncp-ia"><img src="./assets/capa-licitacoes-pncp-ia.png" width="100%" alt="licitacoes-pncp-ia"/></a>
 
-### 📡 Captação de Licitações · PNCP
-<img src="https://img.shields.io/badge/status-validado_em_produ%C3%A7%C3%A3o-2ea043?style=flat-square" alt="validado"/>
+### 📡 licitacoes-pncp-ia
+<img src="https://img.shields.io/badge/open_source-MIT-34D399?style=flat-square" alt="open source"/>
 
-Automação diária que monitora oportunidades de pregão eletrônico em fontes oficiais, aplica critérios proprietários de aderência ao portfólio, gera **relatórios gerenciais** e organiza a documentação dos editais.
+Captação de licitações de ponta a ponta: busca no PNCP, filtra, lê o edital com IA, cruza os itens com a sua tabela de preços e entrega Excel, proposta prévia e declarações por e-mail.
 
-- Execução agendada e monitorada
-- Tolerância a falhas com alertas automáticos
-- Processo auditável e versionado
+- Instalação com 2 cliques (Windows) ou 1 comando (macOS/Linux)
+- Adaptável a qualquer ramo, sem programar
+- Testado a cada atualização, inclusive no Docker
 
-`n8n` `JavaScript` `API PNCP` `Excel` `Docker`
+`n8n` `Python` `Docker` `Claude` `Gemini`
 
-🔒 Código em repositório privado · demonstração sob solicitação
+[**Repositório →**](https://github.com/Max-Martins/licitacoes-pncp-ia)
 
 </td>
 <td width="50%" valign="top">
 
-<img src="./assets/capa-lab.png" width="100%" alt="Automation Lab"/>
+<a href="https://github.com/Max-Martins/compras-publicas-mcp"><img src="./assets/capa-compras-publicas-mcp.png" width="100%" alt="compras-publicas-mcp"/></a>
 
-### 🧪 Automation Lab
-<img src="https://img.shields.io/badge/status-em_evolu%C3%A7%C3%A3o-8250df?style=flat-square" alt="em evolução"/>
+### 🤖 compras-publicas-mcp
+<img src="https://img.shields.io/badge/open_source-MIT-34D399?style=flat-square" alt="open source"/>
 
-Laboratório onde novas automações são concebidas, testadas e validadas antes de chegar à produção.
+Servidor MCP que dá à sua IA acesso ao PNCP e ao Compras.gov.br: propostas abertas, itens, documentos, atas, CATMAT e pesquisa de preços, direto da conversa.
 
-- Prototipação e testes de novos fluxos
-- Componentes reutilizáveis e boas práticas
-- IA aplicada ao desenvolvimento
+- Somente leitura, com fonte e data em cada resposta
+- Zero dependências, sem chave de API
+- Claude, ChatGPT/Codex, Cursor e VS Code
 
-`n8n` `Python` `APIs REST` `IA`
+`MCP` `Node.js` `PNCP` `CATMAT`
 
-🔒 Repositório privado
+[**Repositório →**](https://github.com/Max-Martins/compras-publicas-mcp)
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-<img src="./assets/capa-infra.png" width="100%" alt="Infraestrutura n8n Self-Hosted"/>
-
-### 🐳 n8n Self-Hosting
-<img src="https://img.shields.io/badge/status-estudo_de_infra-8b949e?style=flat-square" alt="estudo"/>
-
-Referência de hospedagem do n8n em diferentes ambientes (Docker, Docker Compose, Kubernetes), usada como base para a infraestrutura dos meus fluxos de automação.
-
-`Docker` `Kubernetes` `n8n`
-
-[**Repositório →**](https://github.com/Max-Martins/n8n-hosting)
-
-</td>
-<td width="50%" valign="top">
-
-<img src="./assets/capa-pncp-consulta.png" width="100%" alt="pncp-consulta"/>
+<a href="https://github.com/Max-Martins/pncp-consulta"><img src="./assets/capa-pncp-consulta.png" width="100%" alt="pncp-consulta"/></a>
 
 ### 🔎 pncp-consulta
 <img src="https://img.shields.io/badge/open_source-MIT-34D399?style=flat-square" alt="open source"/>
@@ -147,43 +77,26 @@ Cliente leve em Python para a **API pública do PNCP**: lista licitações com p
 - Paginação automática e novas tentativas
 - CSV pronto para o Excel em português
 
-`Python` `API PNCP` `CLI` `GitHub Actions`
+`Python` `API PNCP` `CLI`
 
 [**Repositório →**](https://github.com/Max-Martins/pncp-consulta)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
-<img src="./assets/capa-profile-cards.png" width="100%" alt="Profile Cards — painéis do perfil desenhados por código próprio"/>
+<img src="./assets/capa-profile-cards.png" width="100%" alt="Profile Cards: painéis do perfil desenhados por código próprio"/>
 
 ### 📊 Profile Cards
 <img src="https://img.shields.io/badge/status-automatizado-0066ff?style=flat-square" alt="automatizado"/>
 
-Gerador próprio dos painéis deste perfil. Coleta dados pela **API GraphQL do GitHub** e desenha os SVGs de métricas, sequência, atividade e conquistas, sem serviços de terceiros e sem dependências externas.
+Gerador próprio dos painéis deste perfil. Coleta os dados pela **API GraphQL do GitHub** e desenha os SVGs de métricas, sequência, atividade e conquistas, sem serviços de terceiros.
 
-- Python puro (apenas biblioteca padrão)
+- Python puro (biblioteca padrão)
 - Atualização diária via GitHub Actions
-- Modo `--demo` para testar o layout offline
 
-`Python` `GraphQL` `GitHub Actions` `SVG`
+`Python` `GraphQL` `SVG`
 
-[**Código →**](./scripts/generate_cards.py) · [Workflow →](./.github/workflows/metrics.yml)
-
-</td>
-<td width="50%" valign="top">
-
-<img src="./assets/capa-contribution-snake.png" width="100%" alt="Contribution Snake — a cobrinha que devora as contribuições"/>
-
-### 🐍 Contribution Snake
-<img src="https://img.shields.io/badge/status-automatizado-0066ff?style=flat-square" alt="automatizado"/>
-
-Animação do gráfico de contribuições, gerada diariamente por GitHub Actions e publicada em branch dedicada.
-
-`GitHub Actions` `SVG`
-
-[**Workflow →**](./.github/workflows/snake.yml)
+[**Código →**](./scripts/generate_cards.py)
 
 </td>
 </tr>
@@ -197,18 +110,37 @@ Onde cada ferramenta entra, do edital publicado ao pós-contrato:
 
 ```mermaid
 flowchart LR
-    A["📡 Captação<br/>API PNCP · diário"] --> B["🔎 Triagem<br/>n8n + critérios de aderência"]
+    A["📡 Captação<br/>API PNCP"] --> B["🔎 Triagem<br/>filtros + IA"]
     B --> C["🧠 Análise<br/>IA sobre edital e TR"]
-    C --> D["💰 Proposta<br/>Excel · preço e margem"]
+    C --> D["💰 Proposta<br/>tabela de preços"]
     D --> E["📦 Pós-contrato<br/>atas · empenhos · faturamento"]
 
-    classDef done fill:#ff6b00,stroke:#ff6b00,color:#ffffff
-    classDef next fill:#0d1117,stroke:#0066ff,color:#ffffff
-    class A,B done
-    class C,D,E next
+    classDef done fill:#2dd4a8,stroke:#2dd4a8,color:#071018
+    classDef next fill:#0d1117,stroke:#3b82f6,color:#ffffff
+    class A,B,C,D done
+    class E next
 ```
 
-<sub>🟧 já automatizado &nbsp;·&nbsp; 🟦 próximos passos &nbsp;·&nbsp; Infra: Docker (n8n self-hosted) · GitHub (versionamento) · Actions (rotinas agendadas)</sub>
+<sub>🟩 já automatizado no <a href="https://github.com/Max-Martins/licitacoes-pncp-ia">licitacoes-pncp-ia</a> &nbsp;·&nbsp; 🟦 próximo passo</sub>
+
+---
+
+## Stack
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" alt="n8n"/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
+<img src="https://img.shields.io/badge/API_PNCP-0066FF?style=flat-square" alt="API PNCP"/>
+<img src="https://img.shields.io/badge/MCP-6B4FBB?style=flat-square" alt="MCP"/>
+<img src="https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude"/>
+<img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" alt="Excel"/>
+<img src="https://img.shields.io/badge/Lei_14.133%2F2021-FF6B00?style=flat-square" alt="Lei 14.133/2021"/>
+
+</div>
 
 ---
 
@@ -216,23 +148,35 @@ flowchart LR
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/metrics/stats.svg" width="100%" alt="GitHub Analytics"/>
-<img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/metrics/streak.svg" width="100%" alt="Contribution Streak"/>
-<img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/metrics/activity.svg" width="100%" alt="Activity Graph"/>
+<img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/metrics/stats.svg" width="100%" alt="Estatísticas do GitHub"/>
+<img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/metrics/streak.svg" width="100%" alt="Sequência de contribuições"/>
+<img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/metrics/activity.svg" width="100%" alt="Atividade"/>
 
 <details>
 <summary><b>🏆 Ver conquistas</b></summary>
 <br/>
-<img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/metrics/trophies.svg" width="100%" alt="GitHub Trophies"/>
+<img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/metrics/trophies.svg" width="100%" alt="Conquistas"/>
 </details>
 
 <br/>
 
-<a href="https://max-martins.github.io/Max-Martins/jogo/?v=2" title="Jogar a cobrinha"><img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution snake"/></a>
+<a href="https://max-martins.github.io/Max-Martins/jogo/?v=2" title="Jogar a cobrinha"><img src="https://raw.githubusercontent.com/Max-Martins/Max-Martins/output/github-contribution-grid-snake.svg" width="100%" alt="Cobrinha comendo o gráfico de contribuições"/></a>
 
-<a href="https://max-martins.github.io/Max-Martins/jogo/?v=2"><img src="https://img.shields.io/badge/%E2%96%B6%20Jogar%20a%20cobrinha-a371f7?style=for-the-badge" alt="Jogar a cobrinha"/></a>
+<a href="https://max-martins.github.io/Max-Martins/jogo/?v=2"><img src="https://img.shields.io/badge/%E2%96%B6%20Jogar%20a%20cobrinha-8b5cf6?style=for-the-badge" alt="Jogar a cobrinha"/></a>
 
-<sub>Painéis gerados diariamente por <a href="./scripts/generate_cards.py">generate_cards.py</a> via GitHub Actions.</sub>
+<sub>Painéis gerados diariamente por <a href="./scripts/generate_cards.py">generate_cards.py</a>. Animação da cobrinha gerada com <a href="https://github.com/Platane/snk">Platane/snk</a>; o <a href="./jogo/index.html">jogo</a> é próprio.</sub>
+
+</div>
+
+---
+
+## Apoie
+
+<div align="center">
+
+Os projetos são gratuitos e abertos. Se algum deles economizou o seu tempo, deixe uma ⭐ ou apoie com um PIX de qualquer valor.
+
+<a href="https://max-martins.github.io/Max-Martins/apoie/"><img src="https://img.shields.io/badge/Apoiar%20com%20PIX-2dd4a8?style=for-the-badge&logo=pix&logoColor=white" alt="Apoiar com PIX"/></a>
 
 </div>
 
@@ -251,6 +195,6 @@ Quer trocar ideias sobre automação de licitações, integração com o PNCP, n
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0066ff,45:ff6b00,100:000000&height=120&section=footer&text=Automatizar%20%C3%A9%20transformar%20processos.&fontSize=18&fontColor=ffffff&fontAlignY=72" width="100%" alt=""/>
+<img src="./assets/rodape.svg" width="100%" alt="Automatizar é transformar processos."/>
 
 </div>

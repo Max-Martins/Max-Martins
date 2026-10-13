@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apoie · Max Marinho</title>
+<meta name="description" content="Apoie os projetos abertos de automação de licitações com um PIX de qualquer valor.">
+<style>
+:root { color-scheme: dark; --bg: #070b14; --panel: #0d1526; --line: rgba(255,255,255,.1); --fg: #e6ebf5; --muted: #9aa6bd;
+  --verde: #2dd4a8; --azul: #3b82f6; --roxo: #8b5cf6; --grad: linear-gradient(90deg, var(--verde), var(--azul) 55%, var(--roxo)); }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; color: var(--fg);
+  font-family: "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
+  background: radial-gradient(700px 400px at 85% 0%, rgba(30,90,170,.45), transparent 70%),
+              radial-gradient(600px 400px at 30% 110%, rgba(16,120,90,.35), transparent 70%), var(--bg); }
+main { width: 100%; max-width: 560px; background: rgba(13,21,38,.85); border: 1px solid var(--line); border-radius: 24px; padding: 36px 32px; }
+.kicker { display: flex; align-items: center; gap: 12px; color: var(--verde); font-weight: 700; font-size: .78rem; letter-spacing: .25em; }
+.kicker::before { content: ""; width: 28px; height: 3px; background: var(--verde); }
+h1 { margin: 18px 0 8px; font-size: clamp(1.8rem, 6vw, 2.4rem); line-height: 1.1; letter-spacing: -.02em; }
+h1 span { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+p { color: var(--muted); line-height: 1.6; margin: 0 0 14px; }
+.chave { margin: 24px 0 10px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg); padding: 14px 16px; }
+.chave small { display: block; color: var(--muted); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
+.chave code { font-family: "JetBrains Mono", Consolas, monospace; font-size: clamp(.8rem, 3.6vw, 1rem); word-break: break-all; color: var(--fg); }
+button { width: 100%; border: 0; border-radius: 12px; padding: 14px; font: inherit; font-weight: 700; font-size: 1rem; cursor: pointer;
+  color: #071018; background: var(--grad); transition: transform .15s; }
+button:hover { transform: translateY(-1px); }
+button:focus-visible { outline: 3px solid var(--fg); outline-offset: 2px; }
+ol { color: var(--muted); padding-left: 20px; line-height: 1.8; margin: 22px 0; }
+ol b { color: var(--fg); }
+.rodape { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 8px; font-size: .9rem; }
+a { color: var(--azul); }
+</style>
+</head>
+<body>
+<main>
+  <div class="kicker">APOIE · PROJETOS ABERTOS</div>
+  <h1>Obrigado por <span>apoiar</span>!</h1>
+  <p>Os projetos de automação de licitações são gratuitos e abertos. Se algum deles economizou o seu tempo, um PIX de qualquer valor ajuda a manter tudo atualizado.</p>
+
+  <div class="chave">
+    <small>Chave PIX aleatória</small>
+    <code id="chave">58f221cc-11b3-4dfe-a4a2-242260aecbb1</code>
+  </div>
+  <button id="copiar" type="button">Copiar chave PIX</button>
+
+  <ol>
+    <li>Abra o app do seu banco e escolha <b>Pix → Pagar com chave</b>.</li>
+    <li>Cole a chave (tipo <b>aleatória</b>) e escolha o valor.</li>
+    <li>Confira o nome do recebedor e confirme.</li>
+  </ol>
+
+  <p class="rodape">Doação voluntária, sem contrapartida. Prefere ajudar de outro jeito? Deixe uma ⭐ nos projetos ou envie sugestões em
+    <a href="https://github.com/Max-Martins">github.com/Max-Martins</a>.</p>
+</main>
+<script>
+const botao = document.getElementById('copiar');
+botao.addEventListener('click', async () => {
+  const chave = document.getElementById('chave').textContent.trim();
+  try {
+    await navigator.clipboard.writeText(chave);
+  } catch {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById('chave'));
+    getSelection().removeAllRanges(); getSelection().addRange(r); document.execCommand('copy');
+  }
+  botao.textContent = 'Chave copiada ✓';
+  setTimeout(() => { botao.textContent = 'Copiar chave PIX'; }, 2500);
+});
+</script>
+</body>
+</html>
